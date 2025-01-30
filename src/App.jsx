@@ -8,12 +8,11 @@ import Adress from './components/Adress/Adress'
 function App() {
   const router = createBrowserRouter([
     {
-
-      path: "",
+      path: "/",
       element: <PrivatePage />,
       children: [
         {
-          path: "category",
+          path: "/category",
           element: <PrivatePage />,
         },
       ]
@@ -31,8 +30,9 @@ function App() {
       element: <Adress />,
     }
   ])
+  
   return (
-    < RouterProvider router={router} />
+    <RouterProvider router={router} />
   )
 }
 

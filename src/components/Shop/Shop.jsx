@@ -8,7 +8,6 @@ import shop2 from "../../assets/shop2.svg";
 import shop3 from "../../assets/shop3.svg";
 import shop4 from "../../assets/shop4.svg";
 import shop5 from "../../assets/shop5.svg";
-import Product from "../Product/Product";
 import Releted from "../Releted/Releted";
 
 const Shop = () => {
@@ -18,19 +17,34 @@ const Shop = () => {
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
-    fetch(`https://greenshop-c00c.onrender.com/api/flowers/${id}`)
-      .then((response) => response.json())
+    setProduct(null); // Yeni veri gelene kadar önceki ürünü temizle
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000); // 5 saniye içinde yanıt gelmezse iptal
+
+    fetch(`https://greenshop-c00c.onrender.com/api/flowers/${id}`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
         setProduct(data);
-        if (data.size && data.size.length > 0) {
+        if (data.size?.length > 0) {
           setSelectedSize(data.size[0]);
         }
       })
       .catch((error) => console.error("Error fetching product data:", error));
+
+    return () => {
+      clearTimeout(timeout);
+      controller.abort(); // Bileşen unmount olursa istek iptal edilir
+    };
   }, [id]);
 
   if (!product) {
-    return <h2>Loading...</h2>; 
+    return <h2>Loading...</h2>;
   }
 
   return (
@@ -57,7 +71,7 @@ const Shop = () => {
             <h1 className="product-title">{product.name}</h1>
             <p className="product-price">${product.price}</p>
             <p className="product-rating">
-              <span>⭐⭐⭐⭐⭐ {product.reviews} Customer Reviews</span>
+              <span>⭐️⭐️⭐️⭐️⭐️ {product.reviews} Customer Reviews</span>
             </p>
 
             <div className="short-description">
@@ -68,7 +82,7 @@ const Shop = () => {
             <div className="product-options">
               <h3>Size:</h3>
               <div className="sizes">
-                {["S", "M", "L", "XL"].map((size) => (
+                {product.size?.map((size) => (
                   <button
                     key={size}
                     className={`size-button ${selectedSize === size ? "active" : ""}`}
@@ -95,6 +109,7 @@ const Shop = () => {
               <Link to="/product" className="btn add-to-cart">ADD TO CART</Link>
             </div>
 
+
             <div className="product-meta">
               <p>
                 <strong>SKU:</strong> {product.sku}
@@ -108,8 +123,7 @@ const Shop = () => {
             </div>
           </div>
         </div>
-        <Releted/>
-
+        <Releted />
       </div>
       <Footer />
     </div>
