@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ijiun {
+    display: flex;
+    margin-top: 50px;
+}
+
+
+.newsletter {
+    text-align: center;
+    width: 400px;
+    margin-right: 30px;
+}
+
+.news-p {
+    text-align: left;
+    margin-left: 40px;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #218838;
+}
+
+.newsletter p {
+    font-size: 14px;
+    color: #666;
+}
+
+@media only screen and (max-width: 768px) {
+    .newsletter {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .newsletter input {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .newsletter button {
+        width: 50%;
+        margin-top: 10px;
+    }
+}
+
+
+.quantity-section {
+    margin-left: 25px;
+}
+
+.quantity1-section {
+    margin-left: 45px;
+    margin-right: -17px;
+}
+
+.ybf {
+    display: flex;
+    gap: 20px;
+}
+
+.vbgbhb {
+    display: flex;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.quantity-btn {
+    margin-left: 7px;
+    margin-right: 10px;
+}
+
+.quantity-section {
+    display: flex;
+}
+
+.hbhb {
+    width: 50px;
+}
+
+.dffb {
+    display: flex;
+    gap: 100px;
+    margin-left: 200px;
+
+}
+
+.cart-totals {}
+
+.jnjnb {
+    margin-right:98px;
+    margin-top: 2px;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 16px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.jnbhjbhb {
+    display: flex;
+    margin-left: 980px;
+}
+
+.jhb {
+    width: 332px;
+    height: 30px;
+    top: 243px;
+    left: 988px;
+    gap: 0px;
+    border-radius: 3px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+
+}
+
+.jbjh {
+    width: 102px;
+    height: 36px;
+    top: 243px;
+    left: 1218px;
+    gap: 0px;
+    border-radius: 0px 3px 3px 0px;
+    opacity: 0px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
+    background-color: #46A358;
+
+}
+
+.huvbhugb {
+    margin-right: -40px;
+}
+
+
+.ijbnhijb {
+    margin-left: 90px;
+}
+
+.ijbnhijbj {
+    margin-left: 108px;
+}
+
+.HJB {
+    margin-top: -295px;
+    margin-right: 70px;
+}
+
+.jnjn {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    margin-top: 30px;
+}
+
+.ddd {
+    margin-left: 58px;
+    margin-right: 20px;
+}
+
+.IJIJ {
+    display: flex;
+}
+
+.kkkk {
+    margin-right: 10px;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.spann {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 5px;
+
+}
+
+.quantity-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #218838;
+}
+
+.cart-totals {
+    margin-top: 10px;
+    text-align: right;
+
+}
+
+.cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #3D3D3D;
+    margin-right: -30px;
+
+}
+
+.ijbnhijbjn {
+    margin-left: 90px;
+    color: #46A358;
+
+}
+
+.checkout-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}

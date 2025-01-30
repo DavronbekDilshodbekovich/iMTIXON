@@ -1,0 +1,204 @@
+.moto {
+    margin-top: 60px;
+}
+
+.Linkkk {
+    display: flex;
+}
+
+.select {
+    margin-left: 302px;
+}
+
+.header-nav {
+    margin-left: 120px;
+}
+
+.selectt {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.fortuna {}
+
+.Itemss {
+    display: flex;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.column {}
+
+.fortni {}
+
+.forget {
+    background-color: #FBFBFB;
+    width: 290px;
+    height: 300px;
+    top: 640px;
+    left: 480px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.imggg {
+    margin-left: -20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.itemmmmmmm {
+    margin-top: -40px;
+}
+
+.hhhh{
+    width: 50px;
+    height: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding-top: 75px;
+}
+
+.p {
+    color: #46A358;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.behruzjan{
+    margin-left: 15px;
+}
+
+.pch {
+    color: #CBCBCB;
+    position: relative;
+    bottom: 34px;
+}
+
+.h {
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.product-card {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.hover-icons span {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.kichik {
+    width: 30px;
+}
+
+.hover-icons {
+    color: #fff;
+}
+
+/* product-card asosiy o'rnatish */
+.product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    /* Hoverda biroz ko'tariladi */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+    /* Hoverda rasm biroz kattalashadi */
+}
+
+/* Hover icons default ko'rinmas */
+.hover-icons {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    /* Tugmalar orasida masofa */
+    z-index: 10;
+    margin-top: 130px
+}
+
+.product-image:hover .hover-icons {
+    display: flex;
+    /* Hover bo'lganda tugmalarni ko'rsatadi */
+    flex-direction: row;
+}
+
+/* Button styling */
+.hover-icons button {
+    padding: 8px 12px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.hover-icons button.kichik {
+    font-size: 12px;
+    padding: 5px 8px;
+}
+
+.hover-icons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Hoverda tugma rangi o'zgaradi */
+}
